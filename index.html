@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Product Management2</title>
+</head>
+
+<body>
+
+    <h2>Product Management</h2>
+
+    <form id="product-form">
+        <div class="pro_all">
+            <div>
+                <label for="name">اسم المنتج</label>
+                <input type="text" id="name" required placeholder="Name">
+            </div>
+
+            <div>
+                <label for="price">السعر</label>
+                <input type="number" id="price" required placeholder="Number">
+                <button type="submit">اضافه منتج</button>
+            </div>
+        </div>
+    </form>
+
+    <form id="product-form2">
+        <div class="onlodenig">
+            <button onclick="openSearchResults()">اخفاء جميع المنتجات</button>
+            <!-- View All Products button -->
+            <button type="button" onclick="viewAllProducts()">عرض جميع المنتجات</button>
+        </div>
+
+        <div class="search_delet">
+            <!-- Search input field -->
+            <label for="search">بحث :</label>
+            <input type="text" id="search" oninput="searchProducts()" placeholder="اكتب اول حرف">
+
+            <button id="delete-all-button" class="del">مسح جميع المنتجات</button>
+        </div>
+    </form>
+
+    <table id="product-table">
+        <thead>
+            <tr>
+                <th>الكود</th>
+                <th>لاسم</th>
+                <th>السعر</th>
+                <th>العمليات</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <div class="title">
+                <h2>تعديل المنتج</h2>
+            </div>
+
+            <div class="container">
+                <form id="edit-form">
+                    <input type="hidden" id="edit-id">
+                    <div>
+                        <label for="edit-name">اسم المنتج:</label>
+                        <input type="text" id="edit-name" required placeholder="Name">
+                    </div>
+                    
+                    <div>
+                        <label for="edit-price">السعر:</label>
+                        <input type="number" id="edit-price" required placeholder="Number">
+                    </div>
+                    <button type="submit">حفظ البيانات</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

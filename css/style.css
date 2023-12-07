@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+#product-form
+{
+    margin-bottom: 50px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.pro_all
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+#product-form2
+{
+    margin-bottom: 50px;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form input, form button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: #ddd;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: #ddd;
+    margin: 0 15px;
+}
+
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container #edit-form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.container #edit-form input
+{
+    width: 100%;
+    font-size: 18px;
+}
+
+.container #edit-form label
+{
+    float: right;
+    padding: 5px;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 10px;
+}
+.title h2
+{
+    text-align: center;
+}
+.del:hover
+{
+    background-color: red;
+}
+
+@media (max-width: 800px) {
+    #product-form .pro_all
+    {
+        align-items: normal;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+    }
+    #product-form .pro_all label
+    {
+        display: none;
+    }
+    #product-form .pro_all input
+    {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #product-form2 
+    {
+        justify-content: center;
+    }
+    #product-form2 .search_delet 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    #product-form2 .search_delet label
+    {
+        width: 100%;
+        text-align: center;
+    }
+    #product-form2 .search_delet input
+    {
+        width: 100%;
+    }
+    .marg1
+    {
+        width: 80%;
+    }
+    .marg2
+    {
+        margin-top: 10px;
+        width: 80%;
+    }
+    .modal-content {
+        
+        width: 80%;
+    }
+}
